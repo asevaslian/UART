@@ -1,0 +1,327 @@
+
+*** Running vivado
+    with args -log top_uart.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_uart.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top_uart.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/aseva/OneDrive/Projects/UART/UART.srcs/utils_1/imports/synth_1/top_uart.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/aseva/OneDrive/Projects/UART/UART.srcs/utils_1/imports/synth_1/top_uart.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_uart -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36012
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1215.375 ; gain = 410.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_uart' [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:17]
+INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/aseva/OneDrive/Projects/UART/src/uart.vhd:5' bound to instance 'uart_i' of component 'uart' [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/aseva/OneDrive/Projects/UART/src/uart.vhd:25]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+	Parameter FIFO_W bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'baud_gen' [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-systemverilog/baud_gen/baud_gen.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'baud_gen' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-systemverilog/baud_gen/baud_gen.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [C:/Users/aseva/OneDrive/Projects/UART/src/uart_rx.vhd:18]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/src/uart_rx.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [C:/Users/aseva/OneDrive/Projects/UART/src/uart_tx.vhd:18]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/src/uart_tx.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'fifo' [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:19]
+	Parameter ADDR_WIDTH bound to: 0 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:22]
+WARNING: [Synth 8-3919] null assignment ignored
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:23]
+WARNING: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-638] synthesizing module 'fifo_ctrl' [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:15]
+	Parameter ADDR_WIDTH bound to: 0 - type: integer 
+WARNING: [Synth 8-506] null port 'w_addr' ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:10]
+WARNING: [Synth 8-506] null port 'r_addr' ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:11]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:16]
+WARNING: [Synth 8-3919] null assignment ignored
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:17]
+WARNING: [Synth 8-3919] null assignment ignored
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:18]
+WARNING: [Synth 8-3919] null assignment ignored
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:19]
+WARNING: [Synth 8-3919] null assignment ignored
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:20]
+WARNING: [Synth 8-3919] null assignment ignored
+WARNING: [Synth 8-6774] Null subtype or type declaration found [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:21]
+WARNING: [Synth 8-3919] null assignment ignored
+INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo_ctrl.vhd:15]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:38]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'reg_file' [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/reg_file.vhd:19]
+	Parameter ADDR_WIDTH bound to: 0 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-506] null port 'w_addr' ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/reg_file.vhd:12]
+WARNING: [Synth 8-506] null port 'r_addr' ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/reg_file.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'reg_file' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/reg_file.vhd:19]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:47]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'fifo' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/sp23-ece524-lab-uart-asevaslian/uart-vhdl/fifo.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'uart' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/src/uart.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'top_uart' (0#1) [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:17]
+WARNING: [Synth 8-4767] Trying to implement RAM 'array_reg_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Write port has constant address. 
+	2: No valid read/write found for RAM. 
+	2: Only 1 word in RAM 
+RAM "array_reg_reg" dissolved into registers
+WARNING: [Synth 8-3848] Net led_r in module/entity top_uart does not have driver. [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:10]
+WARNING: [Synth 8-3848] Net led_g in module/entity top_uart does not have driver. [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:11]
+WARNING: [Synth 8-3848] Net led_b in module/entity top_uart does not have driver. [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:12]
+WARNING: [Synth 8-3848] Net w_data in module/entity top_uart does not have driver. [C:/Users/aseva/OneDrive/Projects/UART/src/uart_top.vhd:47]
+WARNING: [Synth 8-7129] Port led_r in module top_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led_g in module top_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led_b in module top_uart is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1306.965 ; gain = 502.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1306.965 ; gain = 502.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1306.965 ; gain = 502.180
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1306.965 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/aseva/OneDrive/Projects/UART/constr/zybo_master.xdc]
+Finished Parsing XDC File [C:/Users/aseva/OneDrive/Projects/UART/constr/zybo_master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/aseva/OneDrive/Projects/UART/constr/zybo_master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_uart_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_uart_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1354.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1354.844 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input   11 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	   4 Input    5 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'uart_i/fifo_rx_unit/reg_file_unit/array_reg_reg' and it is trimmed from '8' to '4' bits.
+WARNING: [Synth 8-7129] Port led_r in module top_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led_g in module top_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led_b in module top_uart is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |     5|
+|3     |LUT3  |     8|
+|4     |LUT4  |    13|
+|5     |LUT5  |    17|
+|6     |LUT6  |    22|
+|7     |FDCE  |    42|
+|8     |FDPE  |     2|
+|9     |FDRE  |     4|
+|10    |IBUF  |     3|
+|11    |OBUF  |     5|
+|12    |OBUFT |     3|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1354.844 ; gain = 502.180
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.844 ; gain = 550.059
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1354.844 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1354.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 28093f22
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1354.844 ; gain = 927.758
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aseva/OneDrive/Projects/UART/synth_1/synth_1/top_uart.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_uart_utilization_synth.rpt -pb top_uart_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  8 06:29:37 2023...
